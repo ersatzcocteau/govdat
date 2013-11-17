@@ -1,1 +1,47 @@
-a
+\name{sll_cw_phrases}
+\alias{sll_cw_phrases}
+\title{List the top phrases for a facet.}
+\usage{
+ sll_cw_phrases(entity_type=NULL,entity_value=NULL,n=1,sort="count",
+  key = getOption("SunlightLabsKey", stop("need an API key for Sunlight Labs")))
+}
+\arguments{
+  \item{entity_type}{The entity type to get top phrases
+  for. Valid values: 'date', 'month', 'state',
+  'legislator'}
+
+  \item{entity_value}{The value of the entity given in
+  entity_type. Formats are as follows: date: 2011-11-09;
+  month: 201111; state: NY; legislator (bioguide): L000551}
+
+  \item{n}{Start date to search on.}
+
+  \item{sory}{End date to search on.}
+
+  \item{key}{Your SunlightLabs API key; loads from
+  .Rprofile.}
+
+  \item{callopts}{Further curl options (debugging tools
+  mostly)}
+
+}
+\value{
+  A data.frame of phrases with tf-idf and count data.
+}
+\description{
+  List the top phrases for a facet.
+}
+\examples{
+\dontrun{
+#List the top words in July 2010 by count:
+sll_cw_phrases(entity_type="month",entity_value="201007",key=<YOUR_KEY>)
+
+#List the top words for Nevada:
+sll_cw_phrases(entity_type="state",entity_value="NV",key=<YOUR_KEY>)
+
+#List the top words for Nevada:
+sll_cw_phrases(entity_type="legislator",entity_value="L000551",key=<YOUR_KEY>)
+
+
+}
+}
