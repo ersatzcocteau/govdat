@@ -1,6 +1,6 @@
 sll_cw_entity_phrases = 
 function(entity,phrase=NULL,mincount=1,sort="count",state=NULL,
-         party=NULL,chamber=NULL,date=NULL<start_date=NULL,end_date=NULL,
+         party=NULL,chamber=NULL,date=NULL,start_date=NULL,end_date=NULL,
   key = getOption("SunlightLabsKey", stop("need an API key for Sunlight Labs")))
 {
   url = paste("http://capitolwords.org/api/phrases/",entity,".json",sep="")
