@@ -1,5 +1,5 @@
-\name{sll_cw_phrases}
-\alias{sll_cw_phrases}
+\name{sll_cw_entity_phrases}
+\alias{sll_cw_entity_phrases}
 \title{Get the top (legislator|state|party|bioguide_id|volume|chamber)s for a phrase. Standard arguments are supported.}
 \usage{
  sll_cw_entity_phrases(entity,phrase=NULL,mincount=1,sort="count",
