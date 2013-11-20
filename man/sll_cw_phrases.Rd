@@ -16,7 +16,7 @@
 
   \item{n}{Start date to search on.}
 
-  \item{sory}{End date to search on.}
+  \item{sort}{Number of terms in ngram.}
 
   \item{key}{Your SunlightLabs API key; loads from
   .Rprofile.}
