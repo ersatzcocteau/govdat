@@ -14,7 +14,7 @@ function(entity,phrase=NULL,mincount=1,sort="count",state=NULL,
      tt <- content(GET(url, query=args))$results
      if(length(tt) == 0) break()
 
-     datat <- do.call(rbind.fill, lapply(tt, function(x) data.frame(x)))
+     datat <- do.call(rbind.fill, lapply(tt, function(x) data.frame(x,stringsAsFactors=FALSE)))
      if(is.null(data)){
         data = datat
      }
