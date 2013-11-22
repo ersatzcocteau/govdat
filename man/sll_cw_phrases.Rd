@@ -14,15 +14,12 @@
   entity_type. Formats are as follows: date: 2011-11-09;
   month: 201111; state: NY; legislator (bioguide): L000551}
 
-  \item{n}{Start date to search on.}
+  \item{n}{The size of phrase, in words, to search for (up to 5).}
 
-  \item{sort}{Number of terms in ngram.}
+  \item{sort}{The metric and direction to sort by. Valid values: tfidf (default) count. Both a metric and direction must be supplied, such as sort="count asc".}
 
   \item{key}{Your SunlightLabs API key; loads from
   .Rprofile.}
-
-  \item{callopts}{Further curl options (debugging tools
-  mostly)}
 
 }
 \value{
