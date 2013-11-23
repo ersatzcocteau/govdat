@@ -12,7 +12,7 @@
 #' sll_cw_timeseries(phrase='climate change')
 #' 
 #' # Get percentages back, which are not returned by default
-#' sll_cw_timeseries(phrase='climate change', percentages='true')
+#' sll_cw_timeseries(phrase='climate change', percentages=TRUE)
 #' 
 #' # Get a list of how many times the phrase "united states" was said by 
 #' # legislators from Virginia on each day of the most recent Congress:
@@ -51,6 +51,9 @@ sll_cw_timeseries <- function(phrase=NULL, start_date=NULL, end_date=NULL,
 {
   splitt<-function(x) paste(str_sub(x, 1, 4), "-", str_sub(x, 5, 6), sep="")
   url = "http://capitolwords.org/api/dates.json"
+  if(!is.null(percentages)){
+     if(percentages) percentages='true'
+     else percentages=NULL
   args <- compact(list(apikey=key, phrase=phrase, start_date=start_date,
                        end_date=end_date, chamber=chamber, state=state, 
                        party=party, bioguide_id=bioguide_id, mincount=mincount,
