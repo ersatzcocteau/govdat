@@ -54,6 +54,7 @@ sll_cw_timeseries <- function(phrase=NULL, start_date=NULL, end_date=NULL,
   if(!is.null(percentages)){
      if(percentages) percentages='true'
      else percentages=NULL
+  }
   args <- compact(list(apikey=key, phrase=phrase, start_date=start_date,
                        end_date=end_date, chamber=chamber, state=state, 
                        party=party, bioguide_id=bioguide_id, mincount=mincount,
