@@ -39,7 +39,7 @@ sll_cw_text <- function(phrase=NULL, title=NULL, start_date=NULL, end_date=NULL,
          paste0(x, collapse=" - ")
        } else { x }
       })
-     data.frame(x)
+     data.frame(x,stringsAsFactors=FALSE)
   })
   do.call(rbind.fill, data)
 }
