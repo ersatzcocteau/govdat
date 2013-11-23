@@ -46,7 +46,7 @@
 
   \item{percentages}{Include the percentage of mentions
   versus total words in the result objects. Valid values:
-  'true', 'false' (default) (character)}
+  TRUE, FALSE}
 
   \item{granularity}{The length of time covered by each
   result. Valid values: 'year', 'month', 'day' (default)}
